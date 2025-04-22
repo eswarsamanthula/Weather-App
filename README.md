@@ -40,7 +40,7 @@ A responsive Weather App built with **HTML**, **CSS**, and **JavaScript** that s
 - [x] Fetch and display current weather
 - [x] Responsive layout
 - [ ] 5-day forecast section 📆
-- [ ] Weather icons based on conditions ⛅
+- [x] Weather icons based on conditions ⛅
 - [x] Error handling (e.g. city not found)
 - [x] Loading spinner while fetching
 - [ ] `.env` support for secure API key (only in local dev)
