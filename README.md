@@ -26,16 +26,16 @@ A sleek weather forecast app that fetches real-time weather data using the OpenW
 ## 📸 Screenshots
 
 ### 🔍 Search by City
-<img src="images/current-weather-light.png" alt="Weather App Search" width="600"/>
+<img src="screenshots/current-weather-light.png" alt="Weather App Search" width="600"/>
 
 ### 📍 Weather by Location
-<img src="images/current-weather-dark.png" alt="Geolocation Weather" width="600"/>
+<img src="screenshots/current-weather-dark.png" alt="Geolocation Weather" width="600"/>
 
 ### ❌ Retry on Error
-<img src="images/error.png" alt="Error and Retry" width="600"/>
+<img src="screenshots/error.png" alt="Error and Retry" width="600"/>
 
 ### 📅 forecast
-<img src="images/forecast.png" alt="Error and Retry" width="600"/>
+<img src="screenshots/forecast.png" alt="Error and Retry" width="600"/>
 
 ---
 
@@ -65,7 +65,7 @@ A sleek weather forecast app that fetches real-time weather data using the OpenW
 
 ## 📂 Project Structure
 
-📦 Weather-App ┣ 📜 index.html ┣ 📜 style.css ┣ 📜 script.js ┣ 📁 images/ ┃ ┣ 📸 screenshot1.png ┃ ┣ 📸 screenshot2.png ┃ ┗ 📸 screenshot3.png ┣ 📜 README.md
+📦 Weather-App ┣ 📜 index.html ┣ 📜 style.css ┣ 📜 script.js ┣ 📁 screenshots/ ┃ ┣ 📜 README.md
 
 
 ---
