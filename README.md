@@ -26,13 +26,16 @@ A sleek weather forecast app that fetches real-time weather data using the OpenW
 ## 📸 Screenshots
 
 ### 🔍 Search by City
-<img src="images/screenshot1.png" alt="Weather App Search" width="600"/>
+<img src="images/current-weather-light.png" alt="Weather App Search" width="600"/>
 
 ### 📍 Weather by Location
-<img src="images/screenshot2.png" alt="Geolocation Weather" width="600"/>
+<img src="images/current-weather-dark.png" alt="Geolocation Weather" width="600"/>
 
 ### ❌ Retry on Error
-<img src="images/screenshot3.png" alt="Error and Retry" width="600"/>
+<img src="images/error.png" alt="Error and Retry" width="600"/>
+
+### 📅 forecast
+<img src="images/forecast.png" alt="Error and Retry" width="600"/>
 
 ---
 
@@ -81,4 +84,4 @@ Feel free to fork this repo and submit pull requests with improvements, bug fixe
 
 📬 Contact
 Created by Eswar Samanthula
-📧 Email: youremail@example.com (optieswarsamanthulas@gmail.com
+📧 Email: eswarsamanthulas@gmail.com
