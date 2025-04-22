@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="app-title">Weather App</h1>
+        
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Enter city name" id="city-input">
+            <button class="search-button" id="search-btn">Search</button>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+        <div class="location-status" id="location-status" style="text-align:center; margin: 15px 0; color: #fff; font-size: 1rem;">
+        </div>
+        
+        <div style="text-align:center; margin-bottom: 15px;">
+            <button id="retry-btn" style="display:none; background-color:#fff; border:none; padding:10px 20px; border-radius:20px; cursor:pointer; color:#0083b0;">Retry Location</button>
+        </div>
+        
+        <div class="error-message" id="error-message">
+            City not found. Please try another location.
+        </div>
+        
+        <div class="weather-card" id="weather-card">
+            <h2 class="city-name" id="city-name">New York, US</h2>
+            <p class="date" id="date">Monday, April 22, 2025</p>
+            
+            <div class="weather-main">
+                <img src="" alt="Weather icon" class="weather-icon" id="weather-icon">
+                <h1 class="temperature" id="temperature">21°C</h1>
+                <p class="weather-condition" id="weather-condition">Sunny</p>
+            </div>
+            
+            <div class="details">
+                <div class="detail">
+                    <p class="detail-label">Feels Like</p>
+                    <p class="detail-value" id="feels-like">22°C</p>
+                </div>
+                <div class="detail">
+                    <p class="detail-label">Humidity</p>
+                    <p class="detail-value" id="humidity">45%</p>
+                </div>
+                <div class="detail">
+                    <p class="detail-label">Wind</p>
+                    <p class="detail-value" id="wind">5 km/h</p>
+                </div>
+            </div>
+            
+            <div class="unit-toggle">
+                <button class="unit-button unit-active" id="celsius-btn">°C</button>
+                <button class="unit-button" id="fahrenheit-btn">°F</button>
+            </div>
+        </div>
+    </div>
+    <script src="Weather.js"></script>
+</body>
+</html>
