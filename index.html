@@ -3,64 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Dynamic Weather App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="app-title">Weather App</h1>
+    <div class="weather-container">
+        <div class="weather-background">
+            <div class="weather-particles" id="weather-particles"></div>
+        </div>
+        
+        <div class="app-header">
+            <h1 class="app-title">Weather Insight</h1>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
         
         <div class="search-box">
-            <input type="text" class="search-input" placeholder="Enter city name" id="city-input">
-            <button class="search-button" id="search-btn">Search</button>
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search for a city..." id="city-input">
+                <button class="search-button" id="search-btn">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <button class="location-button" id="location-btn">
+                <i class="fas fa-map-marker-alt"></i>
+            </button>
+        </div>
+        
+        <div class="location-status" id="location-status">
+            <div class="location-message"></div>
+            <button id="retry-btn" class="retry-btn">Try Again</button>
         </div>
         
         <div class="loading" id="loading">
             <div class="loading-spinner"></div>
             <p>Fetching weather data...</p>
         </div>
-        <div class="location-status" id="location-status" style="text-align:center; margin: 15px 0; color: #fff; font-size: 1rem;">
-        </div>
-        
-        <div style="text-align:center; margin-bottom: 15px;">
-            <button id="retry-btn" style="display:none; background-color:#fff; border:none; padding:10px 20px; border-radius:20px; cursor:pointer; color:#0083b0;">Retry Location</button>
-        </div>
         
         <div class="error-message" id="error-message">
-            City not found. Please try another location.
+            <i class="fas fa-exclamation-circle"></i>
+            <p>City not found. Please try another location.</p>
         </div>
         
         <div class="weather-card" id="weather-card">
-            <h2 class="city-name" id="city-name">New York, US</h2>
-            <p class="date" id="date">Monday, April 22, 2025</p>
+            <div class="card-header">
+                <div class="location-info">
+                    <h2 class="city-name" id="city-name">New York, US</h2>
+                    <p class="date" id="date">Monday, April 22, 2025</p>
+                </div>
+                <div class="unit-toggle">
+                    <button class="unit-button unit-active" id="celsius-btn">°C</button>
+                    <button class="unit-button" id="fahrenheit-btn">°F</button>
+                </div>
+            </div>
             
             <div class="weather-main">
-                <img src="" alt="Weather icon" class="weather-icon" id="weather-icon">
-                <h1 class="temperature" id="temperature">21°C</h1>
-                <p class="weather-condition" id="weather-condition">Sunny</p>
+                <div class="weather-icon-container">
+                    <div class="weather-icon-wrapper" id="weather-icon-animated">
+                        <!-- Weather icon and animation will be inserted here -->
+                    </div>
+                </div>
+                <div class="weather-info">
+                    <h1 class="temperature" id="temperature">21°C</h1>
+                    <p class="weather-condition" id="weather-condition">Sunny</p>
+                </div>
             </div>
             
             <div class="details">
                 <div class="detail">
+                    <i class="fas fa-thermometer-half"></i>
                     <p class="detail-label">Feels Like</p>
                     <p class="detail-value" id="feels-like">22°C</p>
                 </div>
                 <div class="detail">
+                    <i class="fas fa-tint"></i>
                     <p class="detail-label">Humidity</p>
                     <p class="detail-value" id="humidity">45%</p>
                 </div>
                 <div class="detail">
+                    <i class="fas fa-wind"></i>
                     <p class="detail-label">Wind</p>
                     <p class="detail-value" id="wind">5 km/h</p>
                 </div>
+                <div class="detail">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                    <p class="detail-label">Pressure</p>
+                    <p class="detail-value" id="pressure">1015 hPa</p>
+                </div>
             </div>
             
-            <div class="unit-toggle">
-                <button class="unit-button unit-active" id="celsius-btn">°C</button>
-                <button class="unit-button" id="fahrenheit-btn">°F</button>
+            <div class="air-quality-section" id="air-quality-section">
+                <h3 class="section-title">Air Quality</h3>
+                <div class="air-quality-bar">
+                    <div class="air-quality-indicator" id="air-quality-indicator"></div>
+                </div>
+                <div class="air-quality-info">
+                    <p class="air-quality-value" id="air-quality-value">Good</p>
+                    <p class="air-quality-description" id="air-quality-description">Safe for outdoor activities</p>
+                </div>
+            </div>
+            
+            <div class="forecast-section">
+                <h3 class="section-title">5-Day Forecast</h3>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- Forecast items will be inserted here -->
+                </div>
+            </div>
+            
+            <div class="sunrise-sunset">
+                <div class="sun-info">
+                    <i class="fas fa-sunrise"></i>
+                    <div>
+                        <p class="sun-label">Sunrise</p>
+                        <p class="sun-time" id="sunrise-time">06:15 AM</p>
+                    </div>
+                </div>
+                <div class="sun-info">
+                    <i class="fas fa-sunset"></i>
+                    <div>
+                        <p class="sun-label">Sunset</p>
+                        <p class="sun-time" id="sunset-time">07:45 PM</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <footer class="app-footer">
+        <p>Weather data provided by OpenWeather</p>
+    </footer>
+
     <script src="Weather.js"></script>
 </body>
 </html>
