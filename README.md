@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🌤️ Weather App
 
 [![GitHub Stars](https://img.shields.io/github/stars/eswarsamanthula/Weather-App?style=social)](https://github.com/eswarsamanthula/Weather-App/stargazers)
